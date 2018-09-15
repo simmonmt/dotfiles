@@ -43,15 +43,19 @@ hs.hotkey.bind({"cmd", "alt"}, "F1", function()
       if i == 1 then
           f.x = screenFrame.x
           f.y = screenFrame.y+screenFrame.h - (f.h*2)
+          f.w = screenFrame.w / 2
       elseif i == 2 then
-          f.x = screenFrame.x + f.w
+          f.x = screenFrame.x + screenFrame.w/2
           f.y = screenFrame.y+screenFrame.h - (f.h*2)
+          f.w = screenFrame.w / 2
       elseif i == 3 then
           f.x = screenFrame.x
           f.y = screenFrame.y + screenFrame.h - f.h
+          f.w = screenFrame.w / 2
       else
-          f.x = screenFrame.x + f.w
+          f.x = screenFrame.x + screenFrame.w/2
           f.y = screenFrame.y + screenFrame.h - f.h
+          f.w = screenFrame.w / 2
       end               
 
       win:moveToScreen(tallScreen)
